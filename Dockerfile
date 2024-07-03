@@ -1,6 +1,4 @@
-ARG BUILD_FROM=alpine:latest
-
-FROM $BUILD_FROM
+FROM --platform=$BUILDPLATFORM alpine:latest
 
 RUN apk --update --no-cache add bash nfs-utils && \
                                                   \
